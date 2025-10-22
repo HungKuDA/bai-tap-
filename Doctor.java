@@ -21,16 +21,16 @@ public class Doctor {
     private String specialization;
     private int availability;
     private String email;
-    private String mobile;
+    private String numberPhone; // <-- ĐÃ ĐỔI TÊN: từ 'mobile' thành 'numberPhone'
 
-    public Doctor(int id, String name, String dateOfBirth, String specialization, int availability, String email, String mobile) {
+    public Doctor(int id, String name, String dateOfBirth, String specialization, int availability, String email, String numberPhone) { // <-- ĐÃ ĐỔI TÊN
         this.id = id;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
         this.specialization = specialization;
         this.availability = availability;
         this.email = email;
-        this.mobile = mobile;
+        this.numberPhone = numberPhone; // <-- ĐÃ ĐỔI TÊN
     }
 
     // Getters and Setters
@@ -92,13 +92,17 @@ public class Doctor {
         this.email = email;
     }
 
-    public String getMobile() {
-        return mobile;
+    // --- BẮT ĐẦU THAY ĐỔI CHO SỐ ĐIỆN THOẠI ---
+    
+    public String getNumberPhone() { // <-- ĐÃ ĐỔI TÊN: từ 'getMobile' thành 'getNumberPhone'
+        return numberPhone; // <-- ĐÃ ĐỔI TÊN
     }
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
+    public void setNumberPhone(String numberPhone) { // <-- ĐÃ ĐỔI TÊN: từ 'setMobile' thành 'setNumberPhone'
+        this.numberPhone = numberPhone; // <-- ĐÃ ĐỔI TÊN
     }
+    
+    // --- KẾT THÚC THAY ĐỔI ---
 
     // toString method to display doctor information
     @Override
@@ -113,6 +117,6 @@ public class Doctor {
         }
         
         return String.format("%-5d | %-20s | %-12s | %-20s | %-20s | %-25s | %-15s",
-                id, name, dateOfBirth, specialization, avail, email, mobile);
+                id, name, dateOfBirth, specialization, avail, email, numberPhone); // <-- ĐÃ ĐỔI TÊN
     }
 }
